@@ -1,3 +1,16 @@
+//var userdata = JSON.parse(data);
+var mydata = JSON.parse(data);
+//console.log(mydata[0].todo);
+var i;
+for(i=0; i <mydata.length; i++){
+    var li = document.createElement("li");
+    var inputValue = mydata[i].todo;
+    var t = document.createTextNode(inputValue);
+    //add the text to li element
+    li.appendChild(t);
+    document.getElementById("myUL").appendChild(li);
+}
+
 
 // Create a "close" button and append it to each list item
 var myNodelist = document.getElementsByTagName("li");
